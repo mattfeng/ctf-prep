@@ -2,6 +2,8 @@
 
 import angr
 
+angr.path_group.l.setLevel("DEBUG")
+
 p = angr.Project('./baby-re', load_options={'auto_load_libs': False})
 
 win = 0x40293b
