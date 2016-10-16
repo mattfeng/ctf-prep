@@ -104,10 +104,8 @@ C'[k] = XOR( P'(2)[k], P(N)[k], C(N-1)[k] )
 ## Reversing CBC Encryption
 
 * https://www.usenix.org/legacy/events/woot10/tech/full_papers/Rizzo.pdf
-* 
 
 # Other Resources and Links
 
 * picocTF 2013, Broken CBC
 * [SkullSecurity blog] (https://blog.skullsecurity.org/2013/padding-oracle-attacks-in-depth)
-*
