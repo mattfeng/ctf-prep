@@ -10,12 +10,10 @@ print r.recvline().strip() # blank line
 print r.recvline().strip() # prompt
 
 plain = list('flag' + '\x0c' * 12)
-c_ = [0] * 16
-dc_ = [0] * 16
+c_ = [0] * 16  # C'
+dc_ = [0] * 16 # D(C(2)) - intermediate value of C(2) - \x00 * 16
 
 junk = '0' * 16
-final_cmd = [0] * 16
-
 
 for i in range(16): # indices
     for j in range(0, 256): # all characters
