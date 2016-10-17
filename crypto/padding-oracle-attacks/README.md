@@ -17,7 +17,6 @@
 * What if the length of the data isn't a multiple of the block size?
 * What happens if more than one block is identical, and therefore encrypts identically?
 
-
 ### Padding
 * Hashing algorithm padding: `\x80\x00\x00\x00 ... (length)`
 * **NOT** how block ciphers pad
@@ -93,6 +92,7 @@ P(N)[-1] = XOR( 1, C(N-1)[-1]), C'[-1] )
 ```
 
 From 
+
 ```
 P'(2) = XOR( P(N), C(N-1), C')
 
@@ -108,4 +108,4 @@ C'[k] = XOR( P'(2)[k], P(N)[k], C(N-1)[k] )
 # Other Resources and Links
 
 * picocTF 2013, Broken CBC
-* [SkullSecurity blog] (https://blog.skullsecurity.org/2013/padding-oracle-attacks-in-depth)
+* [SkullSecurity blog](https://blog.skullsecurity.org/2013/padding-oracle-attacks-in-depth)

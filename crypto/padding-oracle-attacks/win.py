@@ -16,7 +16,7 @@ dc_ = [0] * 16 # D(C(2)) - intermediate value of C(2) - \x00 * 16
 junk = '0' * 16
 
 for i in range(16): # indices
-    for j in range(0, 256): # all characters
+    for j in range(0, 256): # try all characters
         c_[15 - i] = j
 
         enc_cmd = ''.join(chr(c) for c in c_) + junk
