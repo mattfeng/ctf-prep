@@ -11,12 +11,14 @@ print r.recvline().strip() # prompt
 
 plain = list('flag' + '\x0c' * 12)
 c_ = [0] * 16  # C'
-dc_ = [0] * 16 # D(C(2)) - intermediate value of C(2) - \x00 * 16
+dc_ = [0] * 16 # D(C(2)) - intermediate value of C(2) = \x00 * 16
 
 junk = '0' * 16
 
+# P'(2) = D(C(2)) XOR C'
+
 for i in range(16): # indices
-    for j in range(0, 256): # try all characters
+    for j in range(0, 256): # try all (j = C'[15-i])
         c_[15 - i] = j
 
         enc_cmd = ''.join(chr(c) for c in c_) + junk
@@ -24,7 +26,7 @@ for i in range(16): # indices
         r.sendline(enc_cmd)
         resp = r.recvline().strip()
 
-        if 'Error' not in resp:
+        if 'Error' not in resp: # if padding is correct, then P'(2) ends with (i+1)
             dc_[15 - i] = (i + 1) ^ j
             for k in range(i + 1):
                 c_[15 - k] = (i + 2) ^ dc_[15 - k]  # set each value including/after i so that padding is correct
