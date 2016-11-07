@@ -1,0 +1,25 @@
+Foremost version 1.5.7 by Jesse Kornblum, Kris Kendall, and Nick Mikus
+Audit File
+
+Foremost started at Sun Nov  6 16:39:55 2016
+Invocation: foremost -t all 61b94d373df24a669390bf5cc31090ac 
+Output directory: /home/pwn/ctf-prep/forensics/steg/output
+Configuration file: /etc/foremost.conf
+------------------------------------------------------------------
+File: 61b94d373df24a669390bf5cc31090ac
+Start: Sun Nov  6 16:39:55 2016
+Length: 193 KB (197904 bytes)
+ 
+Num	 Name (bs=512)	       Size	 File Offset	 Comment 
+
+0:	00000000.gif 	      75 KB 	          0 	  (189 x 188)
+1:	00000151.zip 	     117 KB 	      77499 	 
+Finish: Sun Nov  6 16:39:55 2016
+
+2 FILES EXTRACTED
+	
+gif:= 1
+zip:= 1
+------------------------------------------------------------------
+
+Foremost finished at Sun Nov  6 16:39:55 2016
