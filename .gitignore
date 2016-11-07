@@ -1,0 +1,12 @@
+bigrams.txt
+count_1w.txt
+count_2w.txt
+monograms.txt
+ngram_score.py
+ngram_score.pyc
+quadgrams.txt
+quadgrams_with_punc.txt
+quintgrams.txt
+trigrams.txt
+word_score.py
+word_score.pyc
